@@ -4,9 +4,14 @@
     "autoload": {
         "psr-4": {
             "App\\View\\": "src/view",
+            "App\\View\\App": "src/view/app",
+
+
             "App\\Model\\": "src/model",
             "App\\Controller\\": "src/controller",
             "Core\\": "Core/",
+            "\\": "Core/",
+
             "": "src/"
         }
     },
