@@ -14,6 +14,10 @@ class ComposerStaticInitd283b2255f28412d17ae13a6ddd5cb66
     );
 
     public static $prefixLengthsPsr4 = array (
+        'W' => 
+        array (
+            'Web\\JS\\' => 7,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -36,16 +40,26 @@ class ComposerStaticInitd283b2255f28412d17ae13a6ddd5cb66
         'C' => 
         array (
             'Core\\' => 5,
+            'Classes\\' => 8,
         ),
         'A' => 
         array (
+            'App\\View\\User\\' => 14,
+            'App\\View\\Flash\\' => 15,
+            'App\\View\\Error\\' => 15,
+            'App\\View\\App\\' => 13,
             'App\\View\\' => 9,
             'App\\Model\\' => 10,
             'App\\Controller\\' => 15,
+            'App\\' => 4,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Web\\JS\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/webroot/js',
+        ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
@@ -78,6 +92,26 @@ class ComposerStaticInitd283b2255f28412d17ae13a6ddd5cb66
         array (
             0 => __DIR__ . '/../..' . '/Core',
         ),
+        'Classes\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/classes',
+        ),
+        'App\\View\\User\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/view/User',
+        ),
+        'App\\View\\Flash\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/view/Flash',
+        ),
+        'App\\View\\Error\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/view/Error',
+        ),
+        'App\\View\\App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/view/App',
+        ),
         'App\\View\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/view',
@@ -90,10 +124,10 @@ class ComposerStaticInitd283b2255f28412d17ae13a6ddd5cb66
         array (
             0 => __DIR__ . '/../..' . '/src/controller',
         ),
-    );
-
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/../..' . '/src',
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
     );
 
     public static $classMap = array (
@@ -110,7 +144,6 @@ class ComposerStaticInitd283b2255f28412d17ae13a6ddd5cb66
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitd283b2255f28412d17ae13a6ddd5cb66::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitd283b2255f28412d17ae13a6ddd5cb66::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInitd283b2255f28412d17ae13a6ddd5cb66::$fallbackDirsPsr4;
             $loader->classMap = ComposerStaticInitd283b2255f28412d17ae13a6ddd5cb66::$classMap;
 
         }, null, ClassLoader::class);
