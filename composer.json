@@ -3,16 +3,18 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "App\\View\\": "src/view",
-            "App\\View\\App": "src/view/app",
+            "Classes\\": "classes/",
+            "Web\\JS\\": "webroot/js/",
+            "App\\": "src/",
+            "App\\View\\": "src/view/",
+            "App\\View\\App\\": "src/view/App/",
+            "App\\View\\Error\\": "src/view/Error/",
+            "App\\View\\Flash\\": "src/view/Flash/",
+            "App\\View\\User\\": "src/view/User/",
+            "App\\Model\\": "src/model/",
+            "App\\Controller\\": "src/controller/",
+            "Core\\": "Core/"
 
-
-            "App\\Model\\": "src/model",
-            "App\\Controller\\": "src/controller",
-            "Core\\": "Core/",
-            "\\": "Core/",
-
-            "": "src/"
         }
     },
     "authors": [
