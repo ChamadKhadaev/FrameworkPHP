@@ -7,9 +7,9 @@ use PDOException;
 class DatabaseConfig
 {
     private $host = '127.0.0.1';
-    private $db   = 'test';
-    private $user = 'root';
-    private $pass = '';
+    private $db   = 'mixed';
+    private $user = 'hasan';
+    private $pass = 'hasan';
     private $port = "3306";
     private $charset = 'utf8mb4';
     private $options = [
