@@ -7,6 +7,6 @@ if (PHP_VERSION_ID < 50600) {
     exit(1);
 }
 
-require_once 'vendor/composer/autoload_real.php';
+require_once 'C:\Users\shama\Documents\FrameworkPHP\vendor\composer\autoload_real.php';
 
 return ComposerAutoloaderInitd283b2255f28412d17ae13a6ddd5cb66::getLoader();
