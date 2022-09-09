@@ -1,18 +1,28 @@
-#RewriteEngine On
-#RewriteBase /C:/Users/shama/Documents/FrameworkPHP/
-#RewriteCond %{REQUEST_FILENAME} !-f [OR]
-#RewriteCond %{REQUEST_URI} !^/C:/Users/shama/Documents/FrameworkPHP/(webroot/.+|index.php|robots.txt)$
-#RewriteRule ^ index . php [ QSA , L ]
+RewriteEngine On
 
-RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+
+###############################################################################################################
+#RewriteEngine on
 
 #RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !/Core/
-RewriteCond %{REQUEST_URI} !/src/View/User/
-RewriteCond %{REQUEST_URI} !/vendor/
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_URI} !/Core/
+#RewriteCond %{REQUEST_URI} !/src/View/User/
+#RewriteCond %{REQUEST_URI} !/src/View/Error/
+#RewriteCond %{REQUEST_URI} !/vendor/
 
-RewriteCond %{REQUEST_URI} !^/(webroot/.+|index.php|robots.txt)$
+#RewriteCond %{REQUEST_URI} !^/(webroot/.+|index.php|robots.txt)$
+
+#RewriteCond %{REQUEST_URI}  !(\.png|\.jpg|\.webp|\.gif|\.jpeg|\.zip|\.css|\.svg|\.js)$
+#RewriteRule (.*) routes.php [QSA,L]
+
+
 
 #RewriteRule .* /index.php?q=$0 [L,QSA]
-RewriteRule ^(.*)$ /index.php?path=$1 [NC,L,QSA]
+#RewriteRule ^(.*)$ /index.php?path=$1 [NC,L,QSA]
+
+#RewriteCond %{REQUEST_URI}  !(\.png|\.jpg|\.webp|\.gif|\.jpeg|\.zip|\.css|\.svg|\.js)$
+#RewriteRule (.*) routes.php [QSA,L]
