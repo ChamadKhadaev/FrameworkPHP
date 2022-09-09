@@ -4,16 +4,18 @@
     "autoload": {
         "psr-4": {
             "Classes\\": "classes/",
+            "Classes\\Router\\": "classes/Router/",
             "Web\\JS\\": "webroot/js/",
             "App\\": "src/",
-            "App\\View\\": "src/view/",
-            "App\\View\\App\\": "src/view/App/",
-            "App\\View\\Error\\": "src/view/Error/",
-            "App\\View\\Flash\\": "src/view/Flash/",
-            "App\\View\\User\\": "src/view/User/",
+            "App\\View\\": "src/View/",
+            "App\\View\\App\\": "src/View/App/",
+            "App\\View\\Error\\": "src/View/Error/",
+            "App\\View\\Flash\\": "src/View/Flash/",
+            "App\\View\\User\\": "src/View/User/",
             "App\\Model\\": "src/model/",
             "App\\Controller\\": "src/controller/",
             "Core\\": "Core/"
+
 
         }
     },
@@ -26,6 +28,8 @@
     "require": {
       "ext-pdo": "*",
         "symfony/http-foundation": "^6.1",
-        "vlucas/phpdotenv": "^5.4"
+        "vlucas/phpdotenv": "^5.4",
+        "klein/klein": "^2.1"
+
     }
 }
