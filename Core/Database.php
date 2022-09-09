@@ -2,23 +2,23 @@
 
 namespace Core;
 
+require_once 'autoload.php';
 
+use Dotenv\Dotenv;
 use Exception;
 use PDO;
-use Dotenv;
 use PDOException;
 
-require_once 'vendor/autoload.php';
 
 class Database
 {
 
-	/**
+	/*
 	 * @return PDO
-	 */
+	*/
 	public static function connect(): PDO
     {
-	    $dotenv = new Dotenv\Dotenv(__DIR__);
+	    $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
 	    $dotenv->load();
 
 		try {
@@ -32,6 +32,13 @@ class Database
 		}
         return $pdo;
     }
+
+	/*private static function connect(): PDO
+	{
+		$pdo = new PDO('mysql:host=localhost;dbname=mixed;charset=utf8', 'hasan', 'hasan');
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		return $pdo;
+	}*/
 
 
 	/**
@@ -50,7 +57,7 @@ class Database
 				return $statement->fetchAll();
 			}
 		} catch (PDOException $e) {
-			throw new Exception('Query failed:' . $e->getMessage(), ''.$e->getCode(), null);
+			echo "Database Error: " . $e->getMessage();
 		}
 	}
 
