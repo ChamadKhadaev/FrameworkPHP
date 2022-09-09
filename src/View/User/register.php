@@ -1,3 +1,7 @@
+<?php
+	
+?>
+
 <!Doctype html>
 <html lang="en">
 <head>
@@ -7,10 +11,11 @@
     <title>Register</title>
 </head>
 <body>
-    <form action="" method="post">
-    <input type="text" name="username" placeholder="Username">
-    <input type="password" name="password" placeholder="Password">
-    <input type="submit" value="Register">
+    <form action="/create" method="POST" enctype="multipart/form-data">
+		    <input type="text" name="username" placeholder="Username"/>
+		    <input type="email" name="email" placeholder="Email"/>
+		    <input type="password" name="password" placeholder="Password"/>
+	        <input type="submit" name="register" value="Register"/>
     </form>
 </body>
 </html>

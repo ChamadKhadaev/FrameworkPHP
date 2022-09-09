@@ -1,6 +1,5 @@
 <?php
 
-	require '../../../Core/autoload.php';
 ?>
 
 <!Doctype html>
@@ -12,12 +11,14 @@
 	<link rel="stylesheet" href="../../../webroot/css/main.css">
 </head>
 	<body>
-		<form method="POST" action="/index.php" enctype="multipart/form-data">
+		<form method="POST" action="/loginUser">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username">
 			<label for="email">Email</label>
-			<input type="email" id="email" name="email"/>
+			<input type="email" name="email" id="email" />
 			<label for="password">Password</label>
 			<input type="password" name="password" id="password"/>
-			<button type="submit">Login</button>
+			<input type="submit" name="login" Value="Login"/>
 		</form>
 	</body>
 </html>
